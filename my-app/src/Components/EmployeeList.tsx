@@ -16,7 +16,7 @@ function EmployeeList(){
     const fetchEmployees = async () =>{
         const response = await fetch("https://dummy.restapiexample.com/api/v1/employees");
         const data = await response.json();
-        setEmployee(data);
+        setEmployee(data.data);
     }
 
 return(

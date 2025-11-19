@@ -8,6 +8,8 @@ import UserList2 from "./Components/UserList2";
 import UserDetails from "./Components/UserDetails";
 import PostList from "./Components/PostList";
 import EmployeeList from "./Components/EmployeeList";
+import UserList from "./Components/UserList";
+import ProductList from "./Components/ProductList";
 function App() {
   return (
     <BrowserRouter>
@@ -30,8 +32,11 @@ function App() {
         <Link to="/employee" className="btn btn-outline-light m-1">
           EmployeeList
         </Link>
-        <Link to="*" className="btn btn-outline-light m-1">
-          Server
+        <Link to="/user" className="btn btn-outline-light m-1">
+          UserList
+        </Link>
+         <Link to="/product" className="btn btn-outline-light m-1">
+          ProductList
         </Link>
       </nav>
 
@@ -42,10 +47,10 @@ function App() {
           <Route path="/users/:id" element={<UserDetails />} />
           <Route path="/post" element={<PostList />} />
           <Route path="/employee" element={<EmployeeList />} />
-
           <Route path="/users" element={<UserList2 />} />
           <Route path="/contact" element={<Contact />} />
-
+          <Route path="/user" element={<UserList />} />
+          <Route path="/product" element={<ProductList />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
