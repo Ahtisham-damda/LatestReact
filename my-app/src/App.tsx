@@ -10,6 +10,7 @@ import PostList from "./Components/PostList";
 import EmployeeList from "./Components/EmployeeList";
 import UserList from "./Components/UserList";
 import ProductList from "./Components/ProductList";
+import RecipeList from "./Components/RecipeList";
 function App() {
   return (
     <BrowserRouter>
@@ -38,6 +39,9 @@ function App() {
          <Link to="/product" className="btn btn-outline-light m-1">
           ProductList
         </Link>
+        <Link to="/recipe" className="btn btn-outline-light m-1">
+          recipe List
+        </Link>
       </nav>
 
       <div className="container mt-4">
@@ -50,6 +54,7 @@ function App() {
           <Route path="/users" element={<UserList2 />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/user" element={<UserList />} />
+          <Route path="/recipe" element={<RecipeList />} />
           <Route path="/product" element={<ProductList />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
