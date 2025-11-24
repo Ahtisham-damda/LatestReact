@@ -6,11 +6,12 @@ import Contact from "./Components/Contact";
 import NotFound from "./Components/NotFound";
 import UserList2 from "./Components/UserList2";
 import UserDetails from "./Components/UserDetails";
-import PostList from "./Components/PostList";
 import EmployeeList from "./Components/EmployeeList";
 import UserList from "./Components/UserList";
 import ProductList from "./Components/ProductList";
 import RecipeList from "./Components/RecipeList";
+import PostList3 from "./Components/PostList3";
+import RecipeSearch from "./Components/RecipeSearch";
 function App() {
   return (
     <BrowserRouter>
@@ -49,12 +50,12 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/users/:id" element={<UserDetails />} />
-          <Route path="/post" element={<PostList />} />
+          <Route path="/post" element={<PostList3 />} />
           <Route path="/employee" element={<EmployeeList />} />
           <Route path="/users" element={<UserList2 />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/user" element={<UserList />} />
-          <Route path="/recipe" element={<RecipeList />} />
+          <Route path="/recipe" element={<RecipeSearch />} />
           <Route path="/product" element={<ProductList />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
