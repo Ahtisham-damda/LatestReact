@@ -7,11 +7,13 @@ import NotFound from "./Components/NotFound";
 import UserList2 from "./Components/UserList2";
 import UserDetails from "./Components/UserDetails";
 import EmployeeList from "./Components/EmployeeList";
-import UserList from "./Components/UserList";
+// import UserList from "./Components/UserList";
 import ProductList from "./Components/ProductList";
-import RecipeList from "./Components/RecipeList";
+// import RecipeList from "./Components/RecipeList";
 import PostList3 from "./Components/PostList3";
-import RecipeSearch from "./Components/RecipeSearch";
+// import RecipeSearch from "./Components/RecipeSearch";
+import RecipeList1 from "./Components/RecipeList1";
+import UserSearch from "./Components/UserSearch";
 function App() {
   return (
     <BrowserRouter>
@@ -35,9 +37,9 @@ function App() {
           EmployeeList
         </Link>
         <Link to="/user" className="btn btn-outline-light m-1">
-          UserList
+          User Search
         </Link>
-         <Link to="/product" className="btn btn-outline-light m-1">
+        <Link to="/product" className="btn btn-outline-light m-1">
           ProductList
         </Link>
         <Link to="/recipe" className="btn btn-outline-light m-1">
@@ -54,8 +56,8 @@ function App() {
           <Route path="/employee" element={<EmployeeList />} />
           <Route path="/users" element={<UserList2 />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/user" element={<UserList />} />
-          <Route path="/recipe" element={<RecipeSearch />} />
+          <Route path="/user" element={<UserSearch />} />
+          <Route path="/recipe" element={<RecipeList1 />} />
           <Route path="/product" element={<ProductList />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

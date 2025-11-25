@@ -34,18 +34,6 @@ function Counter() {
 
 export default Counter;
 
-
-
-
-
-
-
-
-
-
-
-
-
 // import { useState } from "react";
 
 // function Counter() {
