@@ -2,18 +2,23 @@ import "./App.css";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from "./Components/Home";
 import About from "./Components/About";
-import Contact from "./Components/Contact";
 import NotFound from "./Components/NotFound";
-import UserList2 from "./Components/UserList2";
-import UserDetails from "./Components/UserDetails";
-import EmployeeList from "./Components/EmployeeList";
-// import UserList from "./Components/UserList";
 import ProductList from "./Components/ProductList";
+
+// import Contact from "./Components/Contact";
+// import UserList2 from "./Components/UserList2";
+// import UserDetails from "./Components/UserDetails";
+// import EmployeeList from "./Components/EmployeeList";
+// import PostList3 from "./Components/PostList3";
 // import RecipeList from "./Components/RecipeList";
-import PostList3 from "./Components/PostList3";
 // import RecipeSearch from "./Components/RecipeSearch";
+// import UserList from "./Components/UserList";
+
 import RecipeList1 from "./Components/RecipeList1";
 import UserSearch from "./Components/UserSearch";
+import CourseAdd from "./Components/CourseAdd";
+import CourseList4 from "./Components/CourseList4";
+import RegisteredUser from "./Components/UserRegisteration";
 function App() {
   return (
     <BrowserRouter>
@@ -42,23 +47,29 @@ function App() {
         <Link to="/product" className="btn btn-outline-light m-1">
           ProductList
         </Link>
-        <Link to="/recipe" className="btn btn-outline-light m-1">
-          recipe List
+        <Link to="/course-list" className="btn btn-outline-light m-1">
+          Course List
+        </Link>
+        <Link to="/Reg" className="btn btn-outline-light m-1">
+          User Registration
         </Link>
       </nav>
 
       <div className="container mt-4">
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/users/:id" element={<UserDetails />} />
+          {/* <Route path="/users/:id" element={<UserDetails />} />
           <Route path="/post" element={<PostList3 />} />
           <Route path="/employee" element={<EmployeeList />} />
           <Route path="/users" element={<UserList2 />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact" element={<Contact />} /> */}
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/CoursesAdd" element={<CourseAdd />} />
           <Route path="/user" element={<UserSearch />} />
+          <Route path="/course-list" element={<CourseList4 />} />
           <Route path="/recipe" element={<RecipeList1 />} />
           <Route path="/product" element={<ProductList />} />
+          <Route path="/Reg" element={<RegisteredUser />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>
