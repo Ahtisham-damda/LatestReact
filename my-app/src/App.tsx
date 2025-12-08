@@ -19,6 +19,7 @@ import UserSearch from "./Components/UserSearch";
 import CourseAdd from "./Components/CourseAdd";
 import CourseList4 from "./Components/CourseList4";
 import RegisteredUser from "./Components/UserRegisteration";
+import CourseEdit from "./Components/CourseEdit";
 function App() {
   return (
     <BrowserRouter>
@@ -65,6 +66,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/CoursesAdd" element={<CourseAdd />} />
+          <Route path="/Courseedit/:id" element={<CourseEdit />} />
+
           <Route path="/user" element={<UserSearch />} />
           <Route path="/course-list" element={<CourseList4 />} />
           <Route path="/recipe" element={<RecipeList1 />} />

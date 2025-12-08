@@ -52,7 +52,7 @@ const CourseList4 = () => {
               <td>{course.description}</td>
               <td>
                 <Link
-                  to={`/edit-course/${course.id}`}
+                  to={`/Courseedit/${course.id}`}
                   className="btn btn-warning me-3"
                 >
                   Edit
