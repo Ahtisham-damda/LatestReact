@@ -71,7 +71,7 @@ const CourseAdd = () => {
         </div>
         <div className="mb-4">
           <label htmlFor="descriptionTextBox" className="form-label fw-bold">
-            Course Title
+            Course Description
           </label>
           <input
             type="text"

@@ -20,6 +20,10 @@ import CourseAdd from "./Components/CourseAdd";
 import CourseList4 from "./Components/CourseList4";
 import RegisteredUser from "./Components/UserRegisteration";
 import CourseEdit from "./Components/CourseEdit";
+import CustomerList from "./Components/CustomerList";
+import CustomerAdd from "./Components/CustomerAdd";
+import CustomerEdit from "./Components/CustomerEdit";
+import CustomerDelete from "./Components/CustomerDelete";
 function App() {
   return (
     <BrowserRouter>
@@ -51,6 +55,9 @@ function App() {
         <Link to="/course-list" className="btn btn-outline-light m-1">
           Course List
         </Link>
+        <Link to="/customer-list" className="btn btn-outline-light m-1">
+          Customer List
+        </Link>
         <Link to="/Reg" className="btn btn-outline-light m-1">
           User Registration
         </Link>
@@ -66,10 +73,16 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/CoursesAdd" element={<CourseAdd />} />
+          <Route path="/CustomersAdd" element={<CustomerAdd />} />
+
           <Route path="/Courseedit/:id" element={<CourseEdit />} />
+          <Route path="/Customeredit/:id" element={<CustomerEdit />} />
+          <Route path="/Customerdelete/:id" element={<CustomerDelete />} />
 
           <Route path="/user" element={<UserSearch />} />
           <Route path="/course-list" element={<CourseList4 />} />
+          <Route path="/customer-list" element={<CustomerList />} />
+
           <Route path="/recipe" element={<RecipeList1 />} />
           <Route path="/product" element={<ProductList />} />
           <Route path="/Reg" element={<RegisteredUser />} />
