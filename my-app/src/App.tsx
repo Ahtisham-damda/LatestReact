@@ -24,6 +24,7 @@ import CustomerList from "./Components/CustomerList";
 import CustomerAdd from "./Components/CustomerAdd";
 import CustomerEdit from "./Components/CustomerEdit";
 import CustomerDelete from "./Components/CustomerDelete";
+import EmployeeCard from "./Components/EmployeeCard";
 function App() {
   return (
     <BrowserRouter>
@@ -44,7 +45,7 @@ function App() {
           PostList
         </Link>
         <Link to="/employee" className="btn btn-outline-light m-1">
-          EmployeeList
+          EmployeeCard
         </Link>
         <Link to="/user" className="btn btn-outline-light m-1">
           User Search
@@ -67,9 +68,10 @@ function App() {
         <Routes>
           {/* <Route path="/users/:id" element={<UserDetails />} />
           <Route path="/post" element={<PostList3 />} />
-          <Route path="/employee" element={<EmployeeList />} />
+          // <Route path="/employee" element={<Emp />} />
           <Route path="/users" element={<UserList2 />} />
           <Route path="/contact" element={<Contact />} /> */}
+          <Route path="/employee" element={<EmployeeCard name={"Ahtisham"} position={"Ceo"} department={"Sales Executive"} salary={120000} children={undefined}  />}/>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/CoursesAdd" element={<CourseAdd />} />
@@ -94,3 +96,57 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import { useState } from "react";
+// import { ThemeContext, type Theme } from "./Context/themeContext";
+// import ThemeToggler from "./Components/themeToggler";
+// import ThemedCard from "./Components/ThemedCard";
+// import ThemedTable from "./Components/ThemedTable";
+
+// import "bootstrap/dist/css/bootstrap.min.css";
+
+// function App() {
+//   const [theme, setTheme] = useState<Theme>("light");
+
+//   const toggleTheme = () => {
+//     setTheme(theme === "light" ? "dark" : "light");
+//   };
+
+//   return (
+//     <ThemeContext.Provider value={{ theme, toggleTheme }}>
+//       <div
+//         className={`min-vh-100 ${
+//           theme === "light" ? "bg-light" : "bg-dark"
+//         }`}
+//       >
+//         <div className="container py-4">
+//           <h1 className={theme === "light" ? "text-dark" : "text-light"}>
+//             Theme Toggle App
+//           </h1>
+
+//           <ThemeToggler />
+//           <ThemedCard />
+//           <ThemedTable />
+//         </div>
+//       </div>
+//     </ThemeContext.Provider>
+//   );
+// }
+
+// export default App;
