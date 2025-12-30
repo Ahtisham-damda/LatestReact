@@ -83,7 +83,7 @@ const RegisteredUser = () => {
         </div>
 
         <div className="mb-3">
-          <label className="form-label">Email</label>
+          <label className="form-label">Confirm Password:</label>
           <input
             type="email"
             className="form-control"

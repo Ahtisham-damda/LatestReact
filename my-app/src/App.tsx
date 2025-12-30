@@ -9,7 +9,6 @@ import ProductList from "./Components/ProductList";
 // import UserList2 from "./Components/UserList2";
 // import UserDetails from "./Components/UserDetails";
 // import EmployeeList from "./Components/EmployeeList";
-// import PostList3 from "./Components/PostList3";
 // import RecipeList from "./Components/RecipeList";
 // import RecipeSearch from "./Components/RecipeSearch";
 // import UserList from "./Components/UserList";
@@ -24,7 +23,8 @@ import CustomerList from "./Components/CustomerList";
 import CustomerAdd from "./Components/CustomerAdd";
 import CustomerEdit from "./Components/CustomerEdit";
 import CustomerDelete from "./Components/CustomerDelete";
-import EmployeeCard from "./Components/EmployeeCard";
+import UserList from "./Components/UserList";
+import PostList3 from "./Components/PostList3";
 function App() {
   return (
     <BrowserRouter>
@@ -67,11 +67,22 @@ function App() {
       <div className="container mt-4">
         <Routes>
           {/* <Route path="/users/:id" element={<UserDetails />} />
-          <Route path="/post" element={<PostList3 />} />
+          
           // <Route path="/employee" element={<Emp />} />
-          <Route path="/users" element={<UserList2 />} />
           <Route path="/contact" element={<Contact />} /> */}
-          <Route path="/employee" element={<EmployeeCard name={"Ahtisham"} position={"Ceo"} department={"Sales Executive"} salary={120000} children={undefined}  />}/>
+
+          {/* <Route
+            path="/employee"
+            element={
+              <EmployeeCard
+                name={"Ahtisham"}
+                position={"Ceo"}
+                department={"Sales Executive"}
+                salary={120000}
+              />
+            }
+          /> */}
+          <Route path="/users" element={<UserList />} />
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/CoursesAdd" element={<CourseAdd />} />
@@ -86,6 +97,7 @@ function App() {
           <Route path="/customer-list" element={<CustomerList />} />
 
           <Route path="/recipe" element={<RecipeList1 />} />
+          <Route path="/post" element={<PostList3 />} />
           <Route path="/product" element={<ProductList />} />
           <Route path="/Reg" element={<RegisteredUser />} />
           <Route path="*" element={<NotFound />} />
@@ -96,22 +108,6 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // import { useState } from "react";
 // import { ThemeContext, type Theme } from "./Context/themeContext";
